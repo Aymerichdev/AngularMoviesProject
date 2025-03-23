@@ -1,0 +1,22 @@
+Movies (Películas)
+Campo	Tipo de Dato	Reglas
+title	String	Requerido, mínimo 3 caracteres
+description	String	Requerido
+genre	String	Requerido
+releaseDate	Date	Requerido, debe ser una fecha válida
+clasification	String	Requerido, solo valores: G, PG, PG-13, R, NC-17
+actorIds	Array de ObjectId	Requerido, referencia a Actor
+imgLinks	Array de String	Opcional, enlaces a imágenes
+
+Actors (Actores)
+Campo	Tipo de Dato	Reglas
+name	String	Requerido, mínimo 2 caracteres, máximo 100 caracteres
+birthDate	Date	Requerido, debe ser una fecha en el pasado
+biography	String	Requerido, mínimo 10 caracteres, máximo 2000 caracteres
+imgLinks	Array de String	Requerido, al menos un enlace de imagen
+
+Users (Usuarios)
+Campo	Tipo de Dato	Reglas
+userLevel	Number	Requerido, solo valores 0 (usuario normal) o 1 (admin)
+mail	String	Requerido, debería validarse como email (se puede agregar regex)
+password	String	Requerido
